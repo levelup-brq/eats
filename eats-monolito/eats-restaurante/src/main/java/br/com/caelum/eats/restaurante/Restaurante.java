@@ -57,5 +57,95 @@ public class Restaurante {
 	@ManyToOne(optional=false)
 	private TipoDeCozinha tipoDeCozinha;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public BigDecimal getTaxaDeEntregaEmReais() {
+		return taxaDeEntregaEmReais;
+	}
+
+	public void setTaxaDeEntregaEmReais(BigDecimal taxaDeEntregaEmReais) {
+		this.taxaDeEntregaEmReais = taxaDeEntregaEmReais;
+	}
+
+	public Integer getTempoDeEntregaMinimoEmMinutos() {
+		return tempoDeEntregaMinimoEmMinutos;
+	}
+
+	public void setTempoDeEntregaMinimoEmMinutos(Integer tempoDeEntregaMinimoEmMinutos) {
+		this.tempoDeEntregaMinimoEmMinutos = tempoDeEntregaMinimoEmMinutos;
+	}
+
+	public Integer getTempoDeEntregaMaximoEmMinutos() {
+		return tempoDeEntregaMaximoEmMinutos;
+	}
+
+	public void setTempoDeEntregaMaximoEmMinutos(Integer tempoDeEntregaMaximoEmMinutos) {
+		this.tempoDeEntregaMaximoEmMinutos = tempoDeEntregaMaximoEmMinutos;
+	}
+
+	public Boolean getAprovado() {
+		return aprovado;
+	}
+
+	public void setAprovado(Boolean aprovado) {
+		this.aprovado = aprovado;
+	}
+
+	public TipoDeCozinha getTipoDeCozinha() {
+		return tipoDeCozinha;
+	}
+
+	public void setTipoDeCozinha(TipoDeCozinha tipoDeCozinha) {
+		this.tipoDeCozinha = tipoDeCozinha;
+	}
+	
+	
+
 
 }

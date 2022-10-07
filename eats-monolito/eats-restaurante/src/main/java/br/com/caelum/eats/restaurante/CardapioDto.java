@@ -20,6 +20,11 @@ class CardapioDto {
 		this(cardapio.getId(), trataCategorias(cardapio.getCategorias()));
 	}
 
+	public CardapioDto(Long id2, List<CategoriaDoCardapioDto> trataCategorias) {
+		this.id = id2;
+		this.categorias = trataCategorias;
+	}
+
 	private static List<CategoriaDoCardapioDto> trataCategorias(List<CategoriaDoCardapio> categorias) {
 		return categorias.stream().map(CategoriaDoCardapioDto::new).collect(Collectors.toList());
 	}

@@ -18,13 +18,13 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @AllArgsConstructor
 @Slf4j
-class RestaurantesController {
+public class RestaurantesController {
 
     private RestauranteRepository repo;
 
     @PostMapping("/restaurantes")
     ResponseEntity<Restaurante> adiciona(@RequestBody Restaurante restaurante, UriComponentsBuilder uriBuilder) {
-        log.info("Insere novo restaurante: " + restaurante);
+        //log.info("Insere novo restaurante: " + restaurante);
         Restaurante salvo = repo.save(restaurante);
         UriComponents uriComponents = uriBuilder.path("/restaurantes/{id}").buildAndExpand(salvo.getId());
         URI uri = uriComponents.toUri();
@@ -36,7 +36,7 @@ class RestaurantesController {
         if (!repo.existsById(id)) {
             throw new ResourceNotFoundException();
         }
-        log.info("Atualiza restaurante: " + restaurante);
+        //log.info("Atualiza restaurante: " + restaurante);
         return repo.save(restaurante);
     }
 

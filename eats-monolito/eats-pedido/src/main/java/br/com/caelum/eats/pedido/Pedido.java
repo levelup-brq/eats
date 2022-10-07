@@ -54,4 +54,54 @@ public class Pedido {
 	@OneToMany(cascade=CascadeType.PERSIST, mappedBy="pedido")
 	private List<ItemDoPedido> itens = new ArrayList<>();
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public LocalDateTime getDataHora() {
+		return dataHora;
+	}
+
+	public void setDataHora(LocalDateTime dataHora) {
+		this.dataHora = dataHora;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Restaurante getRestaurante() {
+		return restaurante;
+	}
+
+	public void setRestaurante(Restaurante restaurante) {
+		this.restaurante = restaurante;
+	}
+
+	public Entrega getEntrega() {
+		return entrega;
+	}
+
+	public void setEntrega(Entrega entrega) {
+		this.entrega = entrega;
+	}
+
+	public List<ItemDoPedido> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<ItemDoPedido> itens) {
+		this.itens = itens;
+	}
+	
+	
+
 }

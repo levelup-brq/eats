@@ -20,7 +20,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/pagamentos")
 @AllArgsConstructor
-class PagamentoController {
+public class PagamentoController {
 
 	private PagamentoRepository pagamentoRepo;
 	private ClienteRestDoPedido pedidoCliente;

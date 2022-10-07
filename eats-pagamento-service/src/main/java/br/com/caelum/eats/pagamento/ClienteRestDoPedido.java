@@ -39,7 +39,12 @@ public class ClienteRestDoPedido {
 @Getter
 @AllArgsConstructor
 class PedidoMudancaDeStatusRequest {
-    private String status;
+	
+    public PedidoMudancaDeStatusRequest(String upperCase) {
+		this.status = upperCase;
+	}
+
+	private String status;
 }
 
 

@@ -18,5 +18,51 @@ class ItemDoPedidoDto {
 	public ItemDoPedidoDto(ItemDoPedido item) {
 		this(item.getId(), item.getQuantidade(), item.getObservacao(), new ItemDoCardapioDto(item.getItemDoCardapio()));
 	}
+	
+	
+
+	public ItemDoPedidoDto(Long id2, Integer quantidade2, String observacao2, ItemDoCardapioDto itemDoCardapioDto) {
+		
+		this.id = id2;
+		this.itemDoCardapio = itemDoCardapioDto;
+		this.observacao = observacao2;
+		this.quantidade = quantidade2;
+	}
+
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
+	public ItemDoCardapioDto getItemDoCardapio() {
+		return itemDoCardapio;
+	}
+
+	public void setItemDoCardapio(ItemDoCardapioDto itemDoCardapio) {
+		this.itemDoCardapio = itemDoCardapio;
+	}
+	
+	
 
 }

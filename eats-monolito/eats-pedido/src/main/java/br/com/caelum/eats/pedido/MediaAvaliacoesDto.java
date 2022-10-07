@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 class MediaAvaliacoesDto {
 
+	public MediaAvaliacoesDto(Long restauranteId2, Double media2) {
+		this.media = media2;
+		this.restauranteId = restauranteId2;
+	}
 	private Long restauranteId;
 	private Double media;
 

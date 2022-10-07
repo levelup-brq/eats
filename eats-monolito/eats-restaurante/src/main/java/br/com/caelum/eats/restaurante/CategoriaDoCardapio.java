@@ -33,5 +33,38 @@ class CategoriaDoCardapio {
 
 	@OneToMany(mappedBy="categoria")
 	private List<ItemDoCardapio> itens = new ArrayList<>();
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Cardapio getCardapio() {
+		return cardapio;
+	}
+
+	public void setCardapio(Cardapio cardapio) {
+		this.cardapio = cardapio;
+	}
+
+	public List<ItemDoCardapio> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<ItemDoCardapio> itens) {
+		this.itens = itens;
+	}
+	
 	
 }
