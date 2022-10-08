@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    username: sa
+    url: jdbc:h2:mem:monolito
+  devtools:
+    restart:
+      additional-paths: ../
+  h2:
+    console:
+      settings:
+        trace: false
+        web-allow-others: false
+      path: /h2-console
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  application: 
+    name: 'eats-monolito'
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

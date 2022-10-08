@@ -15,7 +15,7 @@
 	<name>eats-pagamento-service</name>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
@@ -58,6 +58,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>2.1.6.RELEASE</version>
+    </dependency>
 	</dependencies>
 
 	<build>

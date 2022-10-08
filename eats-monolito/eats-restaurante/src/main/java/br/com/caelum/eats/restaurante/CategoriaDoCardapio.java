@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CategoriaDoCardapio {
+public class CategoriaDoCardapio {
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
