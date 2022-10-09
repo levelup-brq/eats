@@ -57,5 +57,13 @@ public class Restaurante {
 	@ManyToOne(optional=false)
 	private TipoDeCozinha tipoDeCozinha;
 
+	@Override
+	public String toString() {
+		return String.format("%s | % | %s", 
+			this.getId(), 
+			this.getCep(), 
+			this.getTipoDeCozinha().getId()
+		);
+	}
 
 }

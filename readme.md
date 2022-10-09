@@ -12,6 +12,8 @@ Nessa semana temos como objetivo aprender um pouco mais sobre sistemas distribu�
 
 Aqui estamos dando inicio a uma plataforma de delivery de comida, atualmente essa nossa plataforma é composta de 3 serviços, sendo eles:
 
+#/usr/share/apache-maven-3.8.6/bin
+
 - Monolito
     Responsável por armazenar informações dos contextos de: *restaurante*, *pedido*, *administrativo*.
 
