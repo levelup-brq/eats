@@ -1,6 +1,6 @@
 configuracao:
   monolito:
-    url: http://localhost:8080
+    url: http://monolito
     
 spring: 
   application: 

@@ -1,0 +1,57 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo-alura
+    volumes:
+       - /home/jonas/developer/graylog/mongodb:/home/jonas/developer/data/db
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.23
+    container_name: elasticsearch-alura
+    volumes:
+      - /home/jonas/developer/graylog/elasticsearchdata:/home/jonas/developer/elasticsearch/data
+    environment:
+      - http.host=0.0.0.0
+      - transport.host=localhost
+      - network.host=0.0.0.0
+      - node.max_local_storage_nodes=4
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+  graylog:
+    image: graylog/graylog:4.3
+    container_name: graylog-alura
+    volumes:
+      - /home/jonas/developer/graylog/journal:/home/jonas/developer/graylog/data/journal
+      - /home/jonas/developer/graylog/config:/home/jonas/developer/graylog/data/config
+    environment:
+      GRAYLOG_PASSWORD_SECRET: 01234567891234567
+      GRAYLOG_ROOT_PASSWORD_SHA2: 658dd1e9a9cb943da5f7d89588f016a5ef9791fb3923c3ff60a0ec242415ca18
+      GRAYLOG_WEB_ENDPOINT_URI: http://127.0.0.1:9000/api
+    links:
+      - mongodb:mongo
+      - elasticsearch
+    depends_on:
+      - mongodb
+      - elasticsearch
+    ports:
+      # Graylog web interface and REST API
+      - 7555:7555
+      # Syslog TCP
+      - 8514:8514
+      # Syslog UDP
+      - 8514:8514/udp
+      # GELF TCP
+      - 12201:12201
+      # GELF UDP
+      - 12201:12201/udp
+      # API
+      - 9000:9000
+    expose:
+      - 7555
+      - 8514
+      - 12201
+      - 9000

@@ -14,3 +14,6 @@ spring:
           search-paths: config-repo
         native: 
           search-locations: /home/jonas/developer/levelup/eats/config-repo-local
+  sleuth:
+    sampler:
+      percentage: .10
