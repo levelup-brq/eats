@@ -1,0 +1,18 @@
+server:
+   port: 8888
+
+spring:
+   profiles: 
+     active: prod
+   cloud:
+     config:
+       server:
+         bootstrap: true
+         git:
+           uri: https://github.com/JonasBarros1998/eats
+           search-paths: config-repo
+         native: 
+           search-locations: /home/jonas/developer/levelup/eats/config-repo-local
+   sleuth:
+     sampler:
+       percentage: .10

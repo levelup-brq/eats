@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -146,6 +145,13 @@ public class Restaurante {
 	}
 	
 	
-
+	@Override
+ 	public String toString() {
+ 		return String.format("%s | % | %s", 
+ 			this.getId(), 
+ 			this.getCep(), 
+ 			this.getTipoDeCozinha().getId()
+ 		);
+ 	}
 
 }
