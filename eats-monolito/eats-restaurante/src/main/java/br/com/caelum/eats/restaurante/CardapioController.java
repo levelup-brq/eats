@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-public class CardapioController {
+class CardapioController {
 
 	private CardapioRepository repo;
 

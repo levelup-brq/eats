@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-public class RestaurantesMaisProximosController {
+class RestaurantesMaisProximosController {
 
 	private DistanciaService distanciaService;
 

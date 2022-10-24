@@ -23,13 +23,4 @@ class HorarioDeFuncionamentoDto {
 	public HorarioDeFuncionamentoDto(HorarioDeFuncionamento horario) {
 		this(horario.getId(), horario.getDiaDaSemana(), horario.getHorarioDeAbertura(), horario.getHorarioDeFechamento());
 	}
-
-	public HorarioDeFuncionamentoDto(Long id2, DayOfWeek diaDaSemana2, LocalTime horarioDeAbertura2,
-			LocalTime horarioDeFechamento2) {
-		
-		this.diaDaSemana = diaDaSemana2;
-		this.horarioDeAbertura = horarioDeAbertura2;
-		this.horarioDeFechamento = horarioDeFechamento2;
-		this.id = id2;
-	}
 }

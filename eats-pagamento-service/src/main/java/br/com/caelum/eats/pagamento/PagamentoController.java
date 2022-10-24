@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,14 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping("/pagamentos")
 public class PagamentoController {
-	
-	private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(PagamentoController.class);
-	
+
+	private static final Logger LOG = LoggerFactory.getLogger(PagamentoController.class);
+
 	@Autowired
 	private PagamentoRepository pagamentoRepo;
+
 	@Autowired
 	private ClienteRestDoPedido pedidoCliente;
 

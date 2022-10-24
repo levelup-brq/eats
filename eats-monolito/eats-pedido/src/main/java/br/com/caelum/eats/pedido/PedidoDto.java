@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.caelum.eats.pedido.Pedido.Status;
 import br.com.caelum.eats.restaurante.RestauranteDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,17 +25,6 @@ public class PedidoDto {
 	
 	public PedidoDto(Pedido pedido) {
 		this(pedido.getId(), pedido.getDataHora(), pedido.getStatus(), new RestauranteDto(pedido.getRestaurante()), new EntregaDto(pedido.getEntrega()), trataItens(pedido.getItens()));
-	}
-
-	public PedidoDto(Long id2, LocalDateTime dataHora2, Status status2, RestauranteDto restauranteDto,
-			EntregaDto entregaDto, List<ItemDoPedidoDto> trataItens) {
-		
-		this.dataHora = dataHora2;
-		this.entrega = entregaDto;
-		this.id = id2;
-		this.itens = trataItens;
-		this.restaurante = restauranteDto;
-		this.status = status2;
 	}
 
 	private static List<ItemDoPedidoDto> trataItens(List<ItemDoPedido> itens) {

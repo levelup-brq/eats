@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.4</version>
+		<version>2.1.8.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.caelum</groupId>
@@ -15,7 +15,7 @@
 	<name>eats-pagamento-service</name>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 
@@ -28,11 +28,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<exclusions>
-	         <exclusion>
-	           <groupId>org.springframework.boot</groupId>
-	           <artifactId>spring-boot-starter-logging</artifactId>
-	         </exclusion>
-	       </exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
+      </exclusions>
 		</dependency>
 
 		<dependency>
@@ -64,41 +64,37 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		    <version>3.1.4</version>
-		</dependency>
-		
-		<dependency>
- 			<groupId>org.springframework.cloud</groupId>
- 			<artifactId>spring-cloud-starter-openfeign</artifactId>
- 			<version>2.1.5.RELEASE</version>
- 		</dependency>
- 		
- 		<dependency>
- 		  <groupId>org.springframework.cloud</groupId>
- 		  <artifactId>spring-cloud-starter-sleuth</artifactId>
- 		  <version>2.1.5.RELEASE</version>
- 		</dependency>
 
- 		<dependency>
- 		  <groupId>org.springframework.boot</groupId>
- 		  <artifactId>spring-boot-starter-log4j2</artifactId>
- 		  <version>2.7.4</version>
- 		</dependency>
+		<dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>2.1.6.RELEASE</version>
+    </dependency>
 
- 		<dependency>
- 		  <groupId>biz.paluch.logging</groupId>
- 		  <artifactId>logstash-gelf</artifactId>
- 		  <version>1.15.0</version>
- 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.1.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-sleuth</artifactId>
+		  <version>2.1.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-log4j2</artifactId>
+		  <version>2.7.4</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>biz.paluch.logging</groupId>
+		  <artifactId>logstash-gelf</artifactId>
+		  <version>1.15.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,12 +1,12 @@
 configuracao:
-   monolito:
-     url: http://monolito
-
+  monolito:
+    url: http://monolito
+    
 spring: 
-   application: 
-     name: 'pagamento'
-   profiles: 
-     active: prod
-   cloud: 
-     config: 
-       uri: http://localhost:8888
+  application: 
+    name: 'pagamento'
+  profiles: 
+    active: native
+  cloud: 
+    config: 
+      uri: http://localhost:8888

@@ -20,8 +20,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 class RestauranteFormaDePagamento {
 
-	
-
 	@EmbeddedId
 	private RestauranteFormaDePagamentoId id;
 
@@ -32,31 +30,12 @@ class RestauranteFormaDePagamento {
 	@ManyToOne
 	@MapsId("formaDePagamentoId")
 	private FormaDePagamento formaDePagamento;
-	
-	
-	
-	public RestauranteFormaDePagamento() {
-	}
-
-	public RestauranteFormaDePagamento(RestauranteFormaDePagamentoId id2, Restaurante restaurante2,
-			FormaDePagamento formaDePagamento2) {
-		
-		this.formaDePagamento = formaDePagamento2;
-		this.id = id2;
-		this.restaurante = restaurante2;
-		
-	}
 
 	@Embeddable
 	@Data
 	@NoArgsConstructor
 	@AllArgsConstructor
 	static class RestauranteFormaDePagamentoId implements Serializable {
-		public RestauranteFormaDePagamentoId(Long idRestaurante, Long id) {
-			this.formaDePagamentoId = id;
-			this.restauranteId = idRestaurante;
-		}
-
 		private static final long serialVersionUID = 1L;
 
 		@Column(name = "restaurante_id")

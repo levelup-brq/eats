@@ -39,46 +39,5 @@ class HorarioDeFuncionamento {
 	@ManyToOne
 	private Restaurante restaurante;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public DayOfWeek getDiaDaSemana() {
-		return diaDaSemana;
-	}
-
-	public void setDiaDaSemana(DayOfWeek diaDaSemana) {
-		this.diaDaSemana = diaDaSemana;
-	}
-
-	public LocalTime getHorarioDeAbertura() {
-		return horarioDeAbertura;
-	}
-
-	public void setHorarioDeAbertura(LocalTime horarioDeAbertura) {
-		this.horarioDeAbertura = horarioDeAbertura;
-	}
-
-	public LocalTime getHorarioDeFechamento() {
-		return horarioDeFechamento;
-	}
-
-	public void setHorarioDeFechamento(LocalTime horarioDeFechamento) {
-		this.horarioDeFechamento = horarioDeFechamento;
-	}
-
-	public Restaurante getRestaurante() {
-		return restaurante;
-	}
-
-	public void setRestaurante(Restaurante restaurante) {
-		this.restaurante = restaurante;
-	}
-
-	
 
 }

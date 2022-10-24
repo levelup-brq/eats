@@ -24,55 +24,5 @@ public class Restaurante {
 
 	@Column(nullable = false)
 	private Long tipoDeCozinhaId;
-	
-	
 
-	public Restaurante() {
-	}
-
-
-
-	public Restaurante(Long id, String cep, Long tipoDeCozinhaId) {
-		this.id = id;
-		this.cep = cep;
-		this.tipoDeCozinhaId = tipoDeCozinhaId;
-	}
-
-
-
-	public Long getId() {
-		return id;
-	}
-
-
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-
-
-	public String getCep() {
-		return cep;
-	}
-
-
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-
-
-	public Long getTipoDeCozinhaId() {
-		return tipoDeCozinhaId;
-	}
-
-
-
-	public void setTipoDeCozinhaId(Long tipoDeCozinhaId) {
-		this.tipoDeCozinhaId = tipoDeCozinhaId;
-	}
-
-	
 }
