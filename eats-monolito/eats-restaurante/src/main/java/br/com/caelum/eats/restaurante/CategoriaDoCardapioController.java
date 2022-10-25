@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
 
+
 @RestController
 @AllArgsConstructor
-class CategoriaDoCardapioController {
+public class CategoriaDoCardapioController {
 
 	private CategoriaDoCardapioRepository repo;
 

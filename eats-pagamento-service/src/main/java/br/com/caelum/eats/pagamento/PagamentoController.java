@@ -4,6 +4,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,18 +16,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/pagamentos")
-@AllArgsConstructor
-class PagamentoController {
+public class PagamentoController {
 
+	private static final Logger LOG = LoggerFactory.getLogger(PagamentoController.class);
+
+	@Autowired
 	private PagamentoRepository pagamentoRepo;
+
+	@Autowired
 	private ClienteRestDoPedido pedidoCliente;
 
 	@GetMapping
 	ResponseEntity<List<PagamentoDto>> lista() {
+		LOG.info("Listando todos os pagamentos");
 		return ResponseEntity.ok(pagamentoRepo.findAll()
 				.stream()
 				.map(PagamentoDto::new)
